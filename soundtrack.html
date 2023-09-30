@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Jinxed</title>
+    <link rel="stylesheet" href="bashtog.css">
+    <link rel="icon" href="./img/chonkijinx.jpg">                   <!-- add a icon here -->
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <a href="./skemperdu.html" class="navbar_logo">ARCANE</a>
+        <div class="navbar_toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="navbar_menu">
+            <a href="./skemperdu.html" class="navbar_link">Home</a>
+            <a href="./about.html" class="navbar_link">About</a>
+            <a href="./characters.html" class="navbar_link">Characters</a>
+            <a href="./soundtrack.html" class="navbar_link">Soundtrack</a>
+        </div>
+    </nav>
+
+
+
+   <!-- Soundtrack Section -->
+   <div class="soundtrack_section">
+
+        <div class="container">
+            <h1 class="animate-soundtrack">Soundtracks</h1>
+            <div class="row">
+                 <div class="col">
+                    <div class="feature_img animate-soundtrack">
+                        <img src="./soundtrack/pic1.jpg" alt="" width="100%">
+                        <img src="./soundtrack/play.png" alt="" class="play_btn" onclick="playVideo('./soundtrack/enemy.mp4')">
+                    </div>
+                 </div>
+                 <div class="col">
+                    <div class="small_img_row animate-soundtrack">
+                        <div class="small_img">
+                            <img src="./soundtrack/pic2.jpg" alt="">
+                            <img src="./soundtrack/play.png" alt="" class="play_btn" onclick="playVideo('./soundtrack/playground.mp4')">
+                        </div>
+                        <p>BEA MILLER - PLAYGROUND</p>
+                    </div>
+                    <div class="small_img_row animate-soundtrack">
+                        <div class="small_img">
+                            <img src="./soundtrack/pic3.jpg" alt="">
+                            <img src="./soundtrack/play.png" alt="" class="play_btn" onclick="playVideo('./soundtrack/dynasties and dystopia.mp4')">
+                        </div>
+                        <p>DYNASTIES & DYSTOPIA</p>
+                    </div>
+                    <div class="small_img_row animate-soundtrack">
+                        <div class="small_img">
+                            <img src="./soundtrack/pic4.jpg" alt="">
+                            <img src="./soundtrack/play.png" alt="" class="play_btn" onclick="playVideo('./soundtrack/snakes.mp4')">
+                        </div>
+                        <p>PVRIS & MIYAVI - SNAKES</p>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+         <div class="video_player" id="videoPlayer">
+            <video controls width="100%" id="myVideo">
+                <source src="./soundtrack/enemy.mp4">
+            </video>
+            <img src="./soundtrack/close.png" alt="" class="close_btn" onclick="stopVideo()">
+         </div>
+
+   </div>
+
+   <script>
+        var videoPlayer = document.getElementById('videoPlayer');
+        var myVideo = document.getElementById('myVideo');
+
+        function stopVideo(){
+
+            videoPlayer.style.display = "none";
+            myVideo.pause();
+            myVideo.currentTime = 0;
+            
+        }
+
+        function playVideo(file) {
+            myVideo.src = file;
+            videoPlayer.style.display = "block";
+            
+            myVideo.play();
+        }
+
+
+   </script>
+
+   <!-- Footer Section -->
+   <div class="footer">
+    <div class="footer_wrapper">
+        <div class="footer_desc">
+            <h1>Arcane</h1>
+            <p>League of Legends</p>
+            <p id="phone">123-456-119</p>
+        </div>
+        <div class="footer_links">
+            <h2 class="footer_title">Contact Us</h2>
+            <a href="./skemperdu.html" class="footer_link">Contact</a>
+            <a href="./skemperdu.html" class="footer_link">Support</a>
+            <a href="./skemperdu.html" class="footer_link">Mawko igop</a>
+        </div>
+    </div>
+    <div class="footer_wrapper">
+        <div class="footer_links">
+            <h2 class="footer_title">Contents</h2>
+            <a href="./about.html" class="footer_link">About</a>
+            <a href="./characters.html" class="footer_link">Characters</a>
+            <a href="./soundtrack.html" class="footer_link">Soundtrack</a>
+            
+        </div>
+        <div class="footer_links">
+            <h2 class="footer_title">Social Media</h2>
+            <a href="./skemperdu.html" class="footer_link">Instagram</a>
+            <a href="./skemperdu.html" class="footer_link">Facebook</a>
+            <a href="./skemperdu.html" class="footer_link">Twitter</a>
+        </div>
+    </div>
+   </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+    <script src="freshmint.js"></script>
+</body>
+</html>
